@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Card from "./components/card";
+import "./App.css";
 
 function App() {
+  const [showCard, setShowCard] = useState(false);
+  const openCard = () => {
+    setShowCard(true);
+  };
+  const closeCard = () => {
+    setShowCard(false);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={showCard ? "App AppChanged" : "App"}>
+      <div className={showCard ? "main-modificat" : "main" }>
+        <p>Card</p>
+        <button onClick={openCard}>Deschide Card</button>
+      </div>
+      {showCard ? <Card closeCard={closeCard} /> : null}
     </div>
   );
 }

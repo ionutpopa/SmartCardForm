@@ -1,0 +1,180 @@
+.ics {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 18px;
+  color: #a2a2a2;
+  cursor: pointer;
+  transition: 300ms;
+}
+
+.ics:hover {
+  transition: 300ms;
+  color: #696969;
+}
+
+.card {
+  background-color: #F3F3F3;
+  padding: 60px 40px;
+  border-radius: 20px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+}
+
+.card-container {
+  display: flex;
+}
+
+.card-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-name-card-example {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  width: 100%;
+}
+
+.card-name-card-example input {
+  height: 36px;
+  width: 210px;
+  border: 1px solid #cfcfcf;
+  border-radius: 6px;
+}
+
+.card-name-card-example input[type="text"] {
+  padding-left: 15px;
+  letter-spacing: 1.5px;
+}
+
+.card-name {
+  margin-top: auto;
+  padding-bottom: 30px;
+}
+
+.card-name p {
+  padding-bottom: 10px;
+}
+
+.card-example {
+  width: 240px;
+  height: 135px;
+  border-radius: 15px;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 165, 255, 0.6615021008403361) 45%,
+    rgba(255, 81, 0, 0.589) 95%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.card-example :nth-child(2) {
+  padding-top: 15px;
+  letter-spacing: 1px;
+}
+
+.card-example :last-child {
+  padding-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+.card-square {
+  border-radius: 5px;
+  width: 40px;
+  height: 30px;
+  background: #C9C9C9;
+  opacity: 0.7;
+}
+
+.esential-card-details {
+  display: flex;
+  padding-bottom: 30px;
+}
+
+.card-number {
+  padding-right: 10px;
+}
+
+.card-number p {
+  padding-bottom: 10px;
+}
+
+.card-number input {
+  display: flex;
+  height: 36px;
+  width: 180px;
+  border: 1px solid #cfcfcf;
+  border-radius: 6px;
+}
+
+.card-number input[type="text"] {
+  padding-left: 10px;
+  letter-spacing: 1.5px;
+}
+
+.card-number input::placeholder {
+  letter-spacing: 1.5px;
+}
+
+.card-expiration {
+  padding-right: 10px;
+}
+
+.card-expiration p {
+  padding-bottom: 10px;
+}
+
+.card-expiration input {
+  height: 36px;
+  border: 1px solid #cfcfcf;
+  border-radius: 6px;
+}
+
+.card-expiration input[type="text"] {
+  padding-left: 15px;
+  letter-spacing: 1.5px;
+}
+
+.card-cvv p {
+  padding-bottom: 10px;
+}
+
+.card-cvv input {
+  height: 36px;
+  border: 1px solid #cfcfcf;
+  border-radius: 6px;
+}
+
+.card-cvv input[type="text"] {
+  padding-left: 15px;
+  letter-spacing: 1.5px;
+}
+
+.confirm-button {
+  background-color: #35b0da;
+  color: white;
+  cursor: pointer;
+  width: 150px;
+  margin: auto;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 0;
+  margin-bottom: -30px;
+  font-size: 18px;
+  transition: 120ms ease-in;
+}
+
+.confirm-button:hover {
+  transition: 120ms ease-in;
+  background-color: #00759c;
+  outline: none;
+}
