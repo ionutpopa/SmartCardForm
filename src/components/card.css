@@ -14,7 +14,7 @@
 }
 
 .card {
-  background-color: #F3F3F3;
+  background-color: #f5f5f5;
   padding: 60px 40px;
   border-radius: 20px;
   display: flex;
@@ -63,18 +63,47 @@
 }
 
 .card-example {
+  position: relative;
   width: 240px;
   height: 135px;
   border-radius: 15px;
-  background: linear-gradient(
-    90deg,
-    rgba(0, 165, 255, 0.6615021008403361) 45%,
-    rgba(255, 81, 0, 0.589) 95%
-  );
+  background: linear-gradient(120deg, rgb(61, 61, 61) 45%, rgb(88, 88, 88) 95%);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding: 10px;
+}
+
+.check-card {
+  top: 0;
+  right: 0;
+  position: absolute;
+}
+
+.fa-cc-visa,
+.fa-cc-mastercard {
+  display: none;
+  align-items: center;
+  font-size: 45px;
+  color: #313131;
+  padding-top: 15px;
+  padding-right: 15px;
+}
+
+.fa-cc-visa {
+  color: #00bfffcb;
+}
+.fa-cc-mastercard {
+  color: #ff7b00cb;
+}
+
+@keyframes size {
+  from {
+    font-size: 0px;
+  }
+  to {
+    font-size: 45px;
+  }
 }
 
 .card-example :nth-child(2) {
@@ -90,9 +119,17 @@
 .card-square {
   border-radius: 5px;
   width: 40px;
-  height: 30px;
-  background: #C9C9C9;
+  height: 20px;
+  margin-bottom: 10px;
+  background: #c9c9c9;
   opacity: 0.7;
+  margin-left: 10px;
+}
+
+.card-example p {
+  text-align: left;
+  color: white;
+  padding-left: 10px;
 }
 
 .esential-card-details {
@@ -177,4 +214,59 @@
   transition: 120ms ease-in;
   background-color: #00759c;
   outline: none;
+}
+
+@media only screen and (max-width: 650px) {
+  body {
+    overflow: hidden;
+  }
+  .card {
+    padding-top: 10px;
+    width: 320px;
+  }
+  .card-name-card-example {
+    transition: 200ms ease-in;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .card-name {
+    padding-top: 15px;
+    margin-bottom: -50px;
+  }
+  .esential-card-details {
+    flex-direction: column;
+    align-items: center;
+  }
+  p {
+    text-align: center;
+  }
+  .card-number input[type="text"] {
+    padding-right: 20px;
+    letter-spacing: 1.5px;
+    text-align: center;
+  }
+  .card-expiration input[type="text"] {
+    padding-left: 0px;
+    letter-spacing: 1.5px;
+    text-align: center;
+  }
+  .card-expiration {
+    padding-top: 10px;
+  }
+  .card-cvv input[type="text"] {
+    padding-left: 0px;
+    letter-spacing: 1.5px;
+    text-align: center;
+  }
+  .card-cvv {
+    padding-top: 10px;
+  }
+  .card-example p {
+    text-align: left;
+    color: white;
+    padding-left: 10px;
+  }
+  .card-square {
+    margin-left: 10px;
+  }
 }

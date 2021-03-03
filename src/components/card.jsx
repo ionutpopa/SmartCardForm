@@ -14,6 +14,8 @@ const Card = ({ closeCard }) => {
   const expirationRef = useRef(null);
   const cvvRef = useRef(null);
   const confirmBtnRef = useRef(null);
+  const checkVisaCard = useRef(null);
+  const checkMasterCard = useRef(null);
 
   const writeName = (e) => {
     setCardNameExample(e.target.value);
@@ -22,15 +24,21 @@ const Card = ({ closeCard }) => {
     }
   };
 
-  let visaRegEx = /^(?:4[0-9]{12}(?:[0-9]{3})?)$/;
+  let visaRegEx = /^(?:4[1-5][0-9]{14})$/;
   let mastercardRegEx = /^(?:5[1-5][0-9]{14})$/;
 
   const writeNumber = (e) => {
     if (visaRegEx.test(e.target.value)) {
-      console.log("you have a visa card");
+      // you have a visa card
+      checkVisaCard.current.style = "display: flex; animation: size 200ms;";
+    } else {
+      checkVisaCard.current.style = "display: none";
     }
     if (mastercardRegEx.test(e.target.value)) {
-      console.log("you have a mastercard card");
+      // you have a master card
+      checkMasterCard.current.style = "display: flex; animation: size 200ms;";
+    } else {
+      checkMasterCard.current.style = "display: none";
     }
     setCardNumber(
       e.target.value.replace(/[^\dA-Z]/g, "").replace(/(.{4})/g, "$1 ")
@@ -81,6 +89,10 @@ const Card = ({ closeCard }) => {
               <input onChange={writeName} type="text" placeholder="Name" />
             </div>
             <div className="card-example">
+              <div className="check-card">
+                <i ref={checkVisaCard} className="fab fa-cc-visa"></i>
+                <i ref={checkMasterCard} className="fab fa-cc-mastercard"></i>
+              </div>
               <div className="card-square"></div>
               <p>{cardNumberExample}</p>
               <p>{cardNameExample}</p>
